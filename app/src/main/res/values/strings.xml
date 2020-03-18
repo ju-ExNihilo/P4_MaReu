@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ma Réu</string>
+    <!-- Used in NavigationDrawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="search_by">"  Search by :"</string>
+    <string name="navheader_picture">navHeader_picture</string>
+    <string name="search_by_room">Search By Room :</string>
+    <string name="room1">Room 1</string>
+    <string name="room2">Room 2</string>
+    <string name="room3">Room 3</string>
+    <string name="room10">Room 10</string>
+    <string name="room9">Room 9</string>
+    <string name="room8">Room 8</string>
+    <string name="room7">Room 7</string>
+    <string name="room6">Room 6</string>
+    <string name="room5">Room 5</string>
+    <string name="room4">Room 4</string>
+    <string name="croos_image">croos_image</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="time">Time</string>
+    <string name="room">Room</string>
+    <string name="avatar_reunion">avatar_reunion</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default NavigationView Header height -->
+    <dimen name="nav_header_height">206dp</dimen>
+    <dimen name="text_size_btn_by_room">9sp</dimen>
+</resources>
