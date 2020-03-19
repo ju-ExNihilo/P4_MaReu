@@ -23,6 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import fr.julien.Lamzone.R;
+import fr.julien.Lamzone.model.Meeting;
 import fr.julien.Lamzone.ui.fragment.FragmentMeeting;
 
 public class ListMeetingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -122,7 +123,7 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
         int minutes = cldr.get(Calendar.MINUTE);
         picker = new TimePickerDialog(ListMeetingActivity.this,R.style.myTimePickerStyle,
                 (tp, sHour, sMinute) -> {
-                S_search = pad(sHour) + "h" + pad(sMinute);
+                S_search = Meeting.pad(sHour) + "h" + Meeting.pad(sMinute);
                 search = "time";
                 if (!search.contentEquals("default"))layout_for_search.setVisibility(View.VISIBLE);
                 meetingFragment.initList(search, S_search);
@@ -155,12 +156,5 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
         if (!search.contentEquals("default"))layout_for_search.setVisibility(View.VISIBLE);
         meetingFragment.initList(search, S_search);
         this.roomDialog.dismiss();
-    }
-
-    public static String pad(int c) {
-        if (c >= 10)
-            return String.valueOf(c);
-        else
-            return "0" + c;
     }
 }

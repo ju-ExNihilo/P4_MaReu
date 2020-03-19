@@ -1,6 +1,7 @@
 package fr.julien.Lamzone.ui.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +16,13 @@ import fr.julien.Lamzone.R;
 import fr.julien.Lamzone.di.DI;
 import fr.julien.Lamzone.model.Meeting;
 import fr.julien.Lamzone.service.MeetingApiService;
+import fr.julien.Lamzone.ui.activity.DetailsMeetingActivity;
+import fr.julien.Lamzone.ui.recyclerViewAdapter.MyMeetingRecyclerViewAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAdapter.OnItemDeleteListener {
+public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAdapter.OnMeetingItemClickListener {
 
     private RecyclerView recyclerView;
     private MeetingApiService meetingApiService;
@@ -40,6 +43,7 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         meetingApiService = DI.getMeetingApiService();
+
     }
 
     @Override
@@ -77,5 +81,13 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     public void onClickDeleteButton(int position) {
         meetingApiService.deleteMeeting(meetings.get(position));
         initList(search, S_search);
+    }
+
+    @Override
+    public void onClickMeetingItem(int position) {
+        Meeting meetingParcelabe = meetings.get(position);
+        Intent intent = new Intent(this.getActivity(), DetailsMeetingActivity.class);
+        intent.putExtra(DetailsMeetingFragment.KEY_MEETING, meetingParcelabe);
+        startActivity(intent);
     }
 }

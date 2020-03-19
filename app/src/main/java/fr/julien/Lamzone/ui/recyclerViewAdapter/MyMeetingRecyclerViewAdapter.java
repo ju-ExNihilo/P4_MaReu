@@ -1,6 +1,5 @@
-package fr.julien.Lamzone.ui.fragment;
+package fr.julien.Lamzone.ui.recyclerViewAdapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,13 +23,16 @@ import fr.julien.Lamzone.model.Meeting;
  */
 public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeetingRecyclerViewAdapter.ViewHolder> {
 
-    public interface OnItemDeleteListener {void onClickDeleteButton(int position);}
+    public interface OnMeetingItemClickListener {
+        void onClickDeleteButton(int position);
+        void onClickMeetingItem(int position);
+    }
 
-    private final OnItemDeleteListener callback;
-    private WeakReference<OnItemDeleteListener> callbackWeakRef;
+    private final OnMeetingItemClickListener callback;
+    private WeakReference<OnMeetingItemClickListener> callbackWeakRef;
     private final List<Meeting> meetings;
 
-    public MyMeetingRecyclerViewAdapter(List<Meeting> meetings, OnItemDeleteListener callback) {
+    public MyMeetingRecyclerViewAdapter(List<Meeting> meetings, OnMeetingItemClickListener callback) {
         this.meetings = meetings;
         this.callback = callback;
     }
@@ -44,24 +46,31 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        this.callbackWeakRef = new WeakReference<OnItemDeleteListener>(callback);
+        this.callbackWeakRef = new WeakReference<OnMeetingItemClickListener>(callback);
         final Meeting meeting = meetings.get(position);
         String participants = meeting.getParticipants().toString().replaceAll("\\[|\\]" , "");
         holder.mMeetingSubject.setText(meeting.getSubject());
-        holder.mMeetingTime.setText(" - " +meeting.getTime());
+        holder.mMeetingTime.setText(" - " +meeting.getTimeStart());
         holder.mMeetingRoom.setText(" - " +meeting.getPlace());
         holder.mMeetingParticipants.setText(participants);
         Glide.with(holder.mMeetingAvatar.getContext())
                 .load(R.drawable.ic_launcher_background)
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.mMeetingAvatar);
-        /** Listener for delete event "ifFav" is used to know which tab one is in **/
+        /** Listener with callback **/
         holder.mDeleteButton.setOnClickListener(v -> {
-            OnItemDeleteListener callBack = callbackWeakRef.get();
+            OnMeetingItemClickListener callBack = callbackWeakRef.get();
             if (callBack != null) callBack.onClickDeleteButton(position);
         });
 
-        holder.itemView.setOnClickListener(view -> Log.i("DEBUG",meeting.toString()));
+        holder.itemView.setOnClickListener(view -> {
+            OnMeetingItemClickListener callBack = callbackWeakRef.get();
+            if (callBack != null) callBack.onClickMeetingItem(position);
+        });
+    }
+
+    public Meeting getMeeting(int position){
+        return this.meetings.get(position);
     }
 
     @Override

@@ -21,4 +21,12 @@
     <string name="time">Time</string>
     <string name="room">Room</string>
     <string name="avatar_reunion">avatar_reunion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details_of_meeting">Details of Meeting</string>
+    <string name="subject">Subject :</string>
+    <string name="room_detail">Room :</string>
+    <string name="time_detail">Time :</string>
+    <string name="participants">Participants</string>
 </resources>

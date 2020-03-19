@@ -2,6 +2,8 @@
 <resources>
     <color name="colorPrimary">#4e92df</color>
     <color name="colorPrimaryDark">#3f7abd</color>
+    <color name="colorPrimaryDark2">#1c5db0</color>
+    <color name="colorPrimaryDark3">#174e94</color>
     <color name="colorForTrash">#3f445e</color>
     <color name="colorForText">#212121</color>
     <color name="colorForSubText">#434343</color>

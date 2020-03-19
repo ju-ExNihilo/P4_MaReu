@@ -37,7 +37,7 @@ public class DummyMeetingApiService implements MeetingApiService {
     public  List<Meeting> searchByTime(String time) {
         meetingsForSearch.clear();
         for (Meeting meeting: meetings) {
-            if (meeting.getTime().contentEquals(time))
+            if (meeting.getTimeStart().contentEquals(time))
                 meetingsForSearch.add(meeting);
         }
         return meetingsForSearch;

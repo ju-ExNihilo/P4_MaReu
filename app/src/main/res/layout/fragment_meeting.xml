@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:id="@+id/item_list_meeting"
-    tools:context=".ui.fragment.MyMeetingRecyclerViewAdapter">
+    tools:context=".ui.recyclerViewAdapter.MyMeetingRecyclerViewAdapter">
 
     <ImageView
         android:id="@+id/item_list_avatar"
