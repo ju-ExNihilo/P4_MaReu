@@ -11,4 +11,9 @@
     <color name="colorRed">#db3645</color>
     <color name="colorWhite">#fff</color>
     <color name="colorBackgroundNavHeader">#B2B9E1</color>
+    <color name="room16">#e1fcac</color>
+    <color name="room28">#acfce9</color>
+    <color name="room37">#fcacb4</color>
+    <color name="room49">#fcacb4</color>
+    <color name="room510">#f5bdff</color>
 </resources>

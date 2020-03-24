@@ -43,8 +43,7 @@ public class ParticipantsRecyclerViewAdapter extends RecyclerView.Adapter<Partic
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.mail_participant)
-        public TextView mail_participant;
+        @BindView(R.id.mail_participant) TextView mail_participant;
 
         public ViewHolder(View view) {
             super(view);

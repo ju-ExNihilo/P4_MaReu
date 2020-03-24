@@ -5,7 +5,6 @@ import android.app.TimePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +16,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.navigation.NavigationView;
 import java.util.Calendar;
 import butterknife.BindView;
@@ -25,15 +27,14 @@ import butterknife.OnClick;
 import fr.julien.Lamzone.R;
 import fr.julien.Lamzone.model.Meeting;
 import fr.julien.Lamzone.ui.fragment.FragmentMeeting;
+import fr.julien.Lamzone.ui.recyclerViewAdapter.RoomPopUpRecyclerViewAdapter;
 
-public class ListMeetingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ListMeetingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
+        RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener {
 
-    @BindView(R.id.meetingActivity_drawer)
-    DrawerLayout drawerLayout;
-    @BindView(R.id.activity_main_nav_view)
-    NavigationView navigationView;
-    @BindView(R.id.layout_for_search)
-    ConstraintLayout layout_for_search;
+    @BindView(R.id.meetingActivity_drawer) DrawerLayout drawerLayout;
+    @BindView(R.id.activity_main_nav_view) NavigationView navigationView;
+    @BindView(R.id.layout_for_search) ConstraintLayout layout_for_search;
 
     private Dialog roomDialog;
     private TimePickerDialog picker;
@@ -41,6 +42,7 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     private String S_search = "";
     private String search = "default";
     private FragmentMeeting meetingFragment;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +104,9 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     @OnClick(R.id.item_stop_search_button)
     void stopSearch() {defaultSearch();}
 
+    @OnClick(R.id.add_meeting)
+    void addMeeting() { AddMeetingActivity.navigate(this);}
+
     private void defaultSearch() {
         search = "default";
         S_search = "";
@@ -112,6 +117,11 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     public void showMenuRoom() {
         roomDialog.setContentView(R.layout.search_by_room_popup);
         roomCloseDialog = (ImageView) roomDialog.findViewById(R.id.roomCloseDialog);
+        recyclerView = (RecyclerView) roomDialog.findViewById(R.id.list_room);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
+        recyclerView.setAdapter(new RoomPopUpRecyclerViewAdapter(this));
         roomCloseDialog.setOnClickListener(view -> roomDialog.dismiss());
         roomDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         roomDialog.show();
@@ -149,10 +159,11 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public void searchByRoom(View view) {
-        Log.i("DEBUG",view.getTag().toString());
+    @Override
+    public void onClickRoomButton(int position) {
         search = "room";
-        S_search = view.getTag().toString();
+        int button_number = position+1;
+        S_search = "Room " + button_number;
         if (!search.contentEquals("default"))layout_for_search.setVisibility(View.VISIBLE);
         meetingFragment.initList(search, S_search);
         this.roomDialog.dismiss();

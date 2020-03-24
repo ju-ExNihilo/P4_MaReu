@@ -9,8 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.DetailsMeetingActivity"
-            android:parentActivityName=".ui.activity.ListMeetingActivity"/>
+
+        <activity
+            android:name=".ui.activity.AddMeetingActivity"
+            android:parentActivityName=".ui.activity.ListMeetingActivity"
+            android:label="@string/activity_add"
+            android:theme="@style/AppTheme1"/>
+
+        <activity
+            android:name=".ui.activity.DetailsMeetingActivity"
+            android:parentActivityName=".ui.activity.ListMeetingActivity" />
+
         <activity android:name=".ui.activity.ListMeetingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

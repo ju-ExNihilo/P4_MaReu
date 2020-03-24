@@ -21,12 +21,9 @@ import fr.julien.Lamzone.ui.recyclerViewAdapter.ParticipantsRecyclerViewAdapter;
  */
 public class DetailsMeetingFragment extends Fragment {
 
-    @BindView(R.id.detail_subject)
-    TextView subject;
-    @BindView(R.id.detail_room)
-    TextView room;
-    @BindView(R.id.detail_time)
-    TextView time;
+    @BindView(R.id.detail_subject) TextView subject;
+    @BindView(R.id.detail_room) TextView room;
+    @BindView(R.id.detail_time) TextView time;
 
     public static final String KEY_MEETING = "KEY_MEETING";
     private Meeting meeting;
@@ -49,7 +46,7 @@ public class DetailsMeetingFragment extends Fragment {
                 meeting = intent.getParcelableExtra(KEY_MEETING);
                 subject.setText(meeting.getSubject());
                 room.setText(meeting.getPlace());
-                time.setText(meeting.getTimeStart() + "   to   " + meeting.getTimeEnd());
+                time.setText(meeting.getTimeStart() +"  "+ getString(R.string.to) +"  "+ meeting.getTimeEnd());
             }
         }
         return (result);
