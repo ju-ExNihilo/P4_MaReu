@@ -6,6 +6,6 @@
         android:id="@+id/menu_activity_main_search"
         android:icon="@drawable/baseline_filter_list_24"
         app:showAsAction="always"
-        android:title="@string/rechercher">
+        android:title="@string/search">
     </item>
 </menu>

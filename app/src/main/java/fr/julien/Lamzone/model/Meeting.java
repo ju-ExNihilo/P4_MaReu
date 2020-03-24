@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import java.util.List;
 
+import fr.julien.Lamzone.R;
+
 /**
  * Model object representing a Meeting
  */
@@ -147,6 +149,27 @@ public class Meeting implements Parcelable {
         this.participants = participants;
     }
 
+    public int getColor(){
+        switch (getPlace()){
+            case "Room 1":
+            case "Room 6":
+                return R.color.room16;
+            case "Room 2":
+            case "Room 8":
+                return R.color.room28;
+            case "Room 3":
+            case "Room 7":
+                return R.color.room37;
+            case "Room 5":
+            case "Room 10":
+                return R.color.room510;
+            default:
+                return R.color.room49;
+
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Meeting{" +
@@ -164,25 +187,6 @@ public class Meeting implements Parcelable {
             return "0" + c;
     }
 
-    public static void freeRoom(Meeting oldMeeting, Meeting newMeeting) {
-
-        if (newMeeting.getHourStart() == oldMeeting.getHourStart() | newMeeting.getHourStart() == oldMeeting.getHourEnd()) {
-
-            if (newMeeting.getMinuteStart() < oldMeeting.getMinuteEnd())
-                System.out.println("Room 4 indisponible");
-            else System.out.println("Room 4 disponible");
-
-
-        }else if (newMeeting.getHourEnd() == oldMeeting.getHourStart()) {
-
-            if (newMeeting.getMinuteEnd() > oldMeeting.getMinuteStart())
-                System.out.println("Room 4 indisponible");
-            else System.out.println("Room 4 disponible");
-
-        }else System.out.println("Room 4 disponible");
-
-    }
-
     @Override
     public int describeContents() {
         return 0;
@@ -190,7 +194,6 @@ public class Meeting implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
         parcel.writeInt(hourStart);
         parcel.writeInt(minuteStart);
         parcel.writeString(place);

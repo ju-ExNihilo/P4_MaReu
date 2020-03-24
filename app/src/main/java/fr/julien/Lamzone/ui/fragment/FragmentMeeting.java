@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -29,6 +31,9 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     private List<Meeting> meetings;
     private String search = "default";
     private String S_search = "";
+    private LinearLayout emptyList;
+    private TextView empty_text;
+    private String emptyText;
 
     /**
      * Create and return a new instance
@@ -43,7 +48,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         meetingApiService = DI.getMeetingApiService();
-
     }
 
     @Override
@@ -54,6 +58,8 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         recyclerView = (RecyclerView) view;
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+        emptyList = (LinearLayout) getActivity().findViewById(R.id.empty_list);
+        empty_text = (TextView) getActivity().findViewById(R.id.empty_text);
         return view;
     }
 
@@ -63,12 +69,26 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
 
         if (search.contentEquals("default")){
             meetings = meetingApiService.getMeeting();
-        }else if (search.contentEquals("room")){
-            meetings = meetingApiService.searchByRoom(S_search);
-        }else if (search.contentEquals("time")){
-            meetings = meetingApiService.searchByTime(S_search);
+            emptyText = getString(R.string.add_meeting);
         }
-        recyclerView.setAdapter(new MyMeetingRecyclerViewAdapter(meetings,this));
+        else if (search.contentEquals("room")){
+            meetings = meetingApiService.searchByRoom(S_search);
+            emptyText = getString(R.string.no_meeting_room);
+        }
+        else if (search.contentEquals("time")){
+            meetings = meetingApiService.searchByTime(S_search);
+            emptyText = getString(R.string.no_meeting_time);
+        }
+
+        if (meetings.isEmpty()){
+            empty_text.setText(emptyText);
+            recyclerView.setVisibility(View.INVISIBLE);
+            emptyList.setVisibility(View.VISIBLE);
+        }else{
+            emptyList.setVisibility(View.INVISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+            recyclerView.setAdapter(new MyMeetingRecyclerViewAdapter(meetings,this));
+        }
     }
 
     @Override

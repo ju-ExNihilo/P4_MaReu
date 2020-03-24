@@ -16,17 +16,30 @@
     <string name="room6">Room 6</string>
     <string name="room5">Room 5</string>
     <string name="room4">Room 4</string>
-    <string name="croos_image">croos_image</string>
-    <string name="rechercher">Rechercher</string>
+    <string name="cross_image">cross_image</string>
+    <string name="search">Search</string>
     <string name="time">Time</string>
     <string name="room">Room</string>
     <string name="avatar_reunion">avatar_reunion</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="details_of_meeting">Details of Meeting</string>
     <string name="subject">Subject :</string>
     <string name="room_detail">Room :</string>
     <string name="time_detail">Time :</string>
     <string name="participants">Participants</string>
+    <string name="activity_add" />
+    <string name="save">Save</string>
+    <string name="time_first">Please select Time first !!</string>
+    <string name="free_room">Select Free Room :</string>
+    <string name="warning">Warning</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_text_mail">enter your email</string>
+    <string name="require_mail">Please enter your email address</string>
+    <string name="ok">Ok</string>
+    <string name="back">Back</string>
+    <string name="require_all_files">Please fill in all fields !!</string>
+    <string name="add_meeting">Please Add new Meeting !!</string>
+    <string name="no_meeting_room">No Meeting for this Room !!</string>
+    <string name="no_meeting_time">No Meeting at this Time !!</string>
+    <string name="to">to</string>
+    <string name="require_valid_mail">Please enter a valid email address !!</string>
 </resources>

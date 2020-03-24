@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:gravity="center">
@@ -16,25 +17,26 @@
         android:layout_marginEnd="7dp"
         android:elevation="15dp"
         android:layout_alignParentEnd="true"
-        android:contentDescription="@string/croos_image" />
+        android:contentDescription="@string/cross_image" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="10dp"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="330dp"
+            android:layout_height="320dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/title_popup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -49,189 +51,17 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="261dp"
+                android:layout_height="255dp"
                 android:background="@color/colorWhite">
 
-                <Button
-                    android:id="@+id/room1"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room1"
-                    android:text="@string/room1"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/room2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.044" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/button_room_item">
 
-                <Button
-                    android:id="@+id/room2"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room2"
-                    android:text="@string/room2"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/room1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.044" />
-
-                <Button
-                    android:id="@+id/room3"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room3"
-                    android:text="@string/room3"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/room2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.044" />
-
-                <Button
-                    android:id="@+id/room4"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room4"
-                    android:text="@string/room4"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/room1" />
-
-                <Button
-                    android:id="@+id/room5"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room5"
-                    android:text="@string/room5"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toEndOf="@+id/room4"
-                    app:layout_constraintTop_toBottomOf="@+id/room2" />
-
-                <Button
-                    android:id="@+id/room6"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room6"
-                    android:text="@string/room6"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toEndOf="@+id/room5"
-                    app:layout_constraintTop_toBottomOf="@+id/room3" />
-
-                <Button
-                    android:id="@+id/room7"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room7"
-                    android:text="@string/room7"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/room4" />
-
-                <Button
-                    android:id="@+id/room8"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room8"
-                    android:text="@string/room8"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toEndOf="@+id/room7"
-                    app:layout_constraintTop_toBottomOf="@+id/room5" />
-
-                <Button
-                    android:id="@+id/room9"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room9"
-                    android:text="@string/room9"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toEndOf="@+id/room8"
-                    app:layout_constraintTop_toBottomOf="@+id/room6" />
-
-                <Button
-                    android:id="@+id/room10"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="115dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/room1"
-                    android:background="@drawable/button_go_search_room"
-                    android:onClick="searchByRoom"
-                    android:tag="@string/room10"
-                    android:text="@string/room10"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_btn_by_room"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/room8" />
+                </androidx.recyclerview.widget.RecyclerView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,17 +4,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import java.lang.ref.WeakReference;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 import fr.julien.Lamzone.R;
 import fr.julien.Lamzone.model.Meeting;
 
@@ -50,13 +48,11 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         final Meeting meeting = meetings.get(position);
         String participants = meeting.getParticipants().toString().replaceAll("\\[|\\]" , "");
         holder.mMeetingSubject.setText(meeting.getSubject());
+        holder.mMeetingAvatar.setImageResource(meeting.getColor());
         holder.mMeetingTime.setText(" - " +meeting.getTimeStart());
         holder.mMeetingRoom.setText(" - " +meeting.getPlace());
         holder.mMeetingParticipants.setText(participants);
-        Glide.with(holder.mMeetingAvatar.getContext())
-                .load(R.drawable.ic_launcher_background)
-                .apply(RequestOptions.circleCropTransform())
-                .into(holder.mMeetingAvatar);
+
         /** Listener with callback **/
         holder.mDeleteButton.setOnClickListener(v -> {
             OnMeetingItemClickListener callBack = callbackWeakRef.get();
@@ -79,18 +75,12 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.item_list_avatar)
-        public ImageView mMeetingAvatar;
-        @BindView(R.id.item_list_subject)
-        public TextView mMeetingSubject;
-        @BindView(R.id.item_list_time)
-        public TextView mMeetingTime;
-        @BindView(R.id.item_list_room)
-        public TextView mMeetingRoom;
-        @BindView(R.id.item_list_participants)
-        public TextView mMeetingParticipants;
-        @BindView(R.id.item_list_delete_button)
-        public ImageButton mDeleteButton;
+        @BindView(R.id.item_list_avatar) CircleImageView mMeetingAvatar;
+        @BindView(R.id.item_list_subject) TextView mMeetingSubject;
+        @BindView(R.id.item_list_time) TextView mMeetingTime;
+        @BindView(R.id.item_list_room) TextView mMeetingRoom;
+        @BindView(R.id.item_list_participants) TextView mMeetingParticipants;
+        @BindView(R.id.item_list_delete_button) ImageButton mDeleteButton;
 
         public ViewHolder(View view) {
             super(view);
