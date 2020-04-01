@@ -32,6 +32,7 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
             R.string.room6,R.string.room7,R.string.room8,R.string.room9,R.string.room10);
     private int hourStart;
     private int minuteStart;
+    private String date ="";
     private final int DURATION_MEETING = 45;
 
     public RoomPopUpRecyclerViewAdapter(OnRoomItemClickListener callback) {
@@ -39,11 +40,12 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
         this.callback = callback;
     }
 
-    public RoomPopUpRecyclerViewAdapter(OnRoomItemClickListener callback, int hourStart, int minuteStart) {
+    public RoomPopUpRecyclerViewAdapter(OnRoomItemClickListener callback, int hourStart, int minuteStart, String date) {
         meetingApiService = DI.getMeetingApiService();
         this.callback = callback;
         this.hourStart = hourStart;
         this.minuteStart = minuteStart;
+        this.date = date;
     }
 
     @NonNull
@@ -58,7 +60,7 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         this.callbackWeakRef = new WeakReference<OnRoomItemClickListener>(callback);
         holder.button_room.setText(buttons_name.get(position));
-        freeRoom(meetingApiService.getMeeting(),hourStart,minuteStart,holder.button_room);
+        freeRoom(meetingApiService.getMeeting(),hourStart,minuteStart,date,holder.button_room);
         holder.button_room.setOnClickListener(v -> {
             OnRoomItemClickListener callBack = callbackWeakRef.get();
             if (callBack != null) callBack.onClickRoomButton(position);
@@ -66,20 +68,22 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
     }
 
     @SuppressLint("ResourceAsColor")
-    private void freeRoom(List<Meeting> meetings, int hourStart, int minuteStart, Button button) {
+    private void freeRoom(List<Meeting> meetings, int hourStart, int minuteStart, String date, Button button) {
         for (Meeting oldMeeting : meetings) {
-            if (hourStart == oldMeeting.getHourStart() | hourStart == oldMeeting.getHourEnd()) {
-                if (minuteStart < oldMeeting.getMinuteEnd()){
-                    if (oldMeeting.getPlace().contentEquals(button.getText())){
-                        button.setBackgroundResource(R.drawable.red_button);
-                        button.setEnabled(false);
+            if (oldMeeting.getDate().contentEquals(date)){
+                if (hourStart == oldMeeting.getHourStart() | hourStart == oldMeeting.getHourEnd()) {
+                    if (minuteStart < oldMeeting.getMinuteEnd()){
+                        if (oldMeeting.getPlace().contentEquals(button.getText())){
+                            button.setBackgroundResource(R.drawable.red_button);
+                            button.setEnabled(false);
+                        }
                     }
-                }
-            }else if (hourStart + DURATION_MEETING == oldMeeting.getHourStart()) {
-                if (minuteStart + DURATION_MEETING > oldMeeting.getMinuteStart()){
-                    if (oldMeeting.getPlace().contentEquals(button.getText())){
-                        button.setBackgroundResource(R.drawable.red_button);
-                        button.setEnabled(false);
+                }else if (hourStart + DURATION_MEETING == oldMeeting.getHourStart()) {
+                    if (minuteStart + DURATION_MEETING > oldMeeting.getMinuteStart()){
+                        if (oldMeeting.getPlace().contentEquals(button.getText())){
+                            button.setBackgroundResource(R.drawable.red_button);
+                            button.setEnabled(false);
+                        }
                     }
                 }
             }

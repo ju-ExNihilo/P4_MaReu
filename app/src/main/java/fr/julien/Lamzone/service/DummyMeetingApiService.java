@@ -2,7 +2,6 @@ package fr.julien.Lamzone.service;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import fr.julien.Lamzone.model.Meeting;
 
 public class DummyMeetingApiService implements MeetingApiService {
@@ -38,6 +37,16 @@ public class DummyMeetingApiService implements MeetingApiService {
         meetingsForSearch.clear();
         for (Meeting meeting: meetings) {
             if (meeting.getTimeStart().contentEquals(time))
+                meetingsForSearch.add(meeting);
+        }
+        return meetingsForSearch;
+    }
+
+    @Override
+    public  List<Meeting> searchByDate(String date) {
+        meetingsForSearch.clear();
+        for (Meeting meeting: meetings) {
+            if (meeting.getDate().contentEquals(date))
                 meetingsForSearch.add(meeting);
         }
         return meetingsForSearch;

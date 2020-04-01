@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/colorBlue"
+       tools:context=".ui.fragment.AddMeetingFragment">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/title_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_title_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            android:layout_marginStart="19dp"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="19dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/add_title_margin_top_land">
+
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/title_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/border_blue"
+                    android:text="@string/for_add_meeting"
+                    android:textAlignment="center"
+                    android:shadowDx="@dimen/detail_text_shadow"
+                    android:shadowDy="@dimen/detail_text_shadow"
+                    android:shadowRadius="@dimen/detail_text_shadow_radius"
+                    android:shadowColor="@color/colorBlueLight"
+                    android:textColor="@color/colorBlueDark"
+                    android:textSize="@dimen/add_title_text_size"
+                    android:textStyle="bold|italic"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/add_meeting_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            android:layout_marginStart="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            app:layout_constraintTop_toBottomOf="@id/title_card" app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="19dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/subjectLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Subject"
+                    android:shadowDx="@dimen/detail_subtext_shadow"
+                    android:shadowDy="@dimen/detail_subtext_shadow"
+                    android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+                    android:shadowColor="@color/colorBlueDark"
+                    android:inputType="text"
+                    android:layout_marginTop="@dimen/add_input_margin_top"
+                    android:textSize="@dimen/add_input_text_size"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlueDark"
+                    android:textCursorDrawable="@drawable/text_cursor_material"
+                    android:textColorHint="@color/colorBlue"
+                    android:background="@drawable/border_blue"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date"
+                    android:shadowDx="@dimen/detail_subtext_shadow"
+                    android:shadowDy="@dimen/detail_subtext_shadow"
+                    android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+                    android:shadowColor="@color/colorBlueDark"
+                    android:inputType="text"
+                    android:layout_marginTop="@dimen/add_input_margin_top"
+                    android:textSize="@dimen/add_input_text_size"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlueDark"
+                    android:background="@drawable/border_blue"
+                    android:textColorHint="@color/colorBlue"
+                    android:textCursorDrawable="@drawable/text_cursor_material"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/timeLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/time"
+                    android:shadowDx="@dimen/detail_subtext_shadow"
+                    android:shadowDy="@dimen/detail_subtext_shadow"
+                    android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+                    android:shadowColor="@color/colorBlueDark"
+                    android:inputType="text"
+                    android:layout_marginTop="@dimen/add_input_margin_top"
+                    android:textSize="@dimen/add_input_text_size"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlueDark"
+                    android:background="@drawable/border_blue"
+                    android:textColorHint="@color/colorBlue"
+                    android:textCursorDrawable="@drawable/text_cursor_material"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roomLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/room"
+                    android:shadowDx="@dimen/detail_subtext_shadow"
+                    android:shadowDy="@dimen/detail_subtext_shadow"
+                    android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+                    android:shadowColor="@color/colorBlueDark"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorBlue"
+                    android:layout_marginTop="@dimen/add_input_margin_top"
+                    android:textSize="@dimen/add_input_text_size"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlueDark"
+                    android:background="@drawable/border_blue"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/participantsLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/participants"
+                    android:shadowDx="@dimen/detail_subtext_shadow"
+                    android:shadowDy="@dimen/detail_subtext_shadow"
+                    android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+                    android:shadowColor="@color/colorBlueDark"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorBlue"
+                    android:layout_marginTop="@dimen/add_input_margin_top"
+                    android:textSize="@dimen/add_input_text_size"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlueDark"
+                    android:background="@drawable/border_blue"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

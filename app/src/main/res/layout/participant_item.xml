@@ -10,17 +10,22 @@
 
 
     <TextView
-        android:id="@+id/mail_participant"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/border_blue"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark3"
-        android:textSize="15sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/mail_participant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_item_participant_size"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorBlueLight"
+            android:textSize="@dimen/detail_text_size"
+            android:textStyle="bold|italic"
+            android:gravity="left"
+            android:shadowDx="@dimen/detail_subtext_shadow"
+            android:shadowDy="@dimen/detail_subtext_shadow"
+            android:shadowRadius="@dimen/detail_subtext_shadow_radius"
+            android:shadowColor="@color/colorBlueDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawableStart="@drawable/ic_mail_black_24dp"
+            android:drawablePadding="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,8 @@ public class Meeting implements Parcelable {
     private int minuteStart;
     private int hourEnd;
     private int minuteEnd;
+    // Date of the meeting
+    private String date;
     // Place of the meeting
     private String place;
     // Subject of the meeting
@@ -26,9 +28,10 @@ public class Meeting implements Parcelable {
     private List<String> participants;
 
     // Constructor
-    public Meeting(int hourStart,int minuteStart, String place, String subject, List<String> participants) {
+    public Meeting(int hourStart,int minuteStart, String date, String place, String subject, List<String> participants) {
         this.hourStart = hourStart;
         this.minuteStart = minuteStart;
+        this.date = date;
         this.place = place;
         this.subject = subject;
         this.participants = participants;
@@ -38,6 +41,7 @@ public class Meeting implements Parcelable {
     protected Meeting(Parcel in) {
         this.hourStart = in.readInt();
         this.minuteStart = in.readInt();
+        this.date = in.readString();
         this.place = in.readString();
         this.subject = in.readString();
         this.participants = in.readArrayList(null);
@@ -133,6 +137,14 @@ public class Meeting implements Parcelable {
         this.place = place;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getSubject() {
         return subject;
     }
@@ -174,6 +186,7 @@ public class Meeting implements Parcelable {
     public String toString() {
         return "Meeting{" +
                 "time = " + getTimeStart() + " à " + getTimeEnd() +
+                ", date='" + date + '\'' +
                 ", place='" + place + '\'' +
                 ", subject='" + subject + '\'' +
                 ", participants=" + participants +
@@ -196,6 +209,7 @@ public class Meeting implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(hourStart);
         parcel.writeInt(minuteStart);
+        parcel.writeString(date);
         parcel.writeString(place);
         parcel.writeString(subject);
         parcel.writeList(participants);

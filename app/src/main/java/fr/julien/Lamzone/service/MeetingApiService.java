@@ -38,5 +38,11 @@ public interface MeetingApiService {
      * @param time
      */
     List<Meeting> searchByTime(String time);
+
+    /**
+     * Create a Meeting
+     * @param date
+     */
+    List<Meeting> searchByDate(String date);
 }
 

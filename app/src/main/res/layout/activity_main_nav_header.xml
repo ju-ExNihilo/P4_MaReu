@@ -3,28 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorBackgroundNavHeader"
+    android:background="@color/colorBlueLight"
     android:gravity="center"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
+        android:scaleType="fitXY"
         android:layout_height="@dimen/nav_header_height"
-        android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/reunion"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:srcCompat="@drawable/meeting_pic"
         android:contentDescription="@string/navheader_picture" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
         android:drawableStart="@drawable/baseline_search_24"
         android:gravity="center"
         android:text="@string/search_by"
-        android:textColor="@color/colorForTrash"
-        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/nav_header_text_size_title"
         android:textStyle="bold|italic" />
 
 </LinearLayout>

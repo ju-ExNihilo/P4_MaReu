@@ -8,6 +8,11 @@
     <color name="colorForText">#212121</color>
     <color name="colorForSubText">#434343</color>
     <color name="colorAccent">#ce0a24</color>
+    <color name="colorBlue">#70A2BB</color>
+    <color name="colorBlueDark">#284768</color>
+    <color name="colorBlueLight">#6683A1</color>
+    <color name="colorForAdd">#009688</color>
+    <color name="colorForAddDark">#00695C</color>
     <color name="colorRed">#db3645</color>
     <color name="colorWhite">#fff</color>
     <color name="colorBackgroundNavHeader">#B2B9E1</color>

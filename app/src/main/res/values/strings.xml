@@ -1,12 +1,26 @@
 <resources>
+
+    <!--          Name App             -->
     <string name="app_name">Ma Réu</string>
-    <!-- Used in NavigationDrawer -->
+    <string name="activity_add" />
+
+    <!--          Used in NavigationDrawer             -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="search_by">"  Search by :"</string>
+    <string name="search">Search</string>
+    <string name="time">Time</string>
+    <string name="room">Room</string>
+
+    <!--          Picture description            -->
+    <string name="reunion_picture">reunion_picture</string>
+    <string name="cross_image">cross_image</string>
     <string name="navheader_picture">navHeader_picture</string>
+    <string name="avatar_reunion">avatar_reunion</string>
+
+    <!--          Search by Room PopUp             -->
     <string name="search_by_room">Search By Room :</string>
-    <string name="room1">Room 1</string>
+    <string name="room1" >Room 1</string>
     <string name="room2">Room 2</string>
     <string name="room3">Room 3</string>
     <string name="room10">Room 10</string>
@@ -16,30 +30,52 @@
     <string name="room6">Room 6</string>
     <string name="room5">Room 5</string>
     <string name="room4">Room 4</string>
-    <string name="cross_image">cross_image</string>
-    <string name="search">Search</string>
-    <string name="time">Time</string>
-    <string name="room">Room</string>
-    <string name="avatar_reunion">avatar_reunion</string>
-    <string name="details_of_meeting">Details of Meeting</string>
-    <string name="subject">Subject :</string>
-    <string name="room_detail">Room :</string>
-    <string name="time_detail">Time :</string>
-    <string name="participants">Participants</string>
-    <string name="activity_add" />
+    <string name="room_format">Room %1$d</string>
+
+    <!--       Add Meeting Fragment       -->
+    <string name="for_add_meeting">Add a Meeting</string>
+    <string name="for_add_participant">Add a Participant :</string>
+    <string name="Subject">Subject</string>
     <string name="save">Save</string>
+    <string name="date">Date</string>
     <string name="time_first">Please select Time first !!</string>
+    <string name="date_first">Please select Date first !!</string>
     <string name="free_room">Select Free Room :</string>
     <string name="warning">Warning</string>
     <string name="cancel">Cancel</string>
     <string name="edit_text_mail">enter your email</string>
-    <string name="require_mail">Please enter your email address</string>
-    <string name="ok">Ok</string>
+    <string name="require_mail">  Please enter your email address  </string>
+    <string name="ok">OK</string>
     <string name="back">Back</string>
     <string name="require_all_files">Please fill in all fields !!</string>
-    <string name="add_meeting">Please Add new Meeting !!</string>
+    <string name="require_valid_mail">Please enter a valid email address !!</string>
+
+    <!--          Detail Fragment            -->
+    <string name="details_of_meeting">Details of Meeting</string>
+    <string name="subject">Subject :</string>
+    <string name="room_detail">Room :</string>
+    <string name="time_detail">Time :</string>
+    <string name="date_detail">Date :</string>
+    <string name="participants">Participants</string>
+    <string name="for_see_details">Select a Meeting</string>
+
+    <!--          For Time          -->
+    <string name="add_h_for_time">%1$sh%2$s</string>
+    <string name="to">%1$s  to  %2$s</string>
+
+    <!--          For Date          -->
+    <string name="date_format">%1$s/%2$s/%3$s</string>
+
+    <!--          For Participant          -->
+    <string name="participant_format">%1$s,%2$s</string>
+
+    <!--          For Come Back          -->
+    <string name="please_click_on_cross">For come back please click on cross</string>
+
+    <!--          For Empty List          -->
     <string name="no_meeting_room">No Meeting for this Room !!</string>
     <string name="no_meeting_time">No Meeting at this Time !!</string>
-    <string name="to">to</string>
-    <string name="require_valid_mail">Please enter a valid email address !!</string>
+    <string name="no_meeting_date">No Meeting at this Date !!</string>
+    <string name="please_add_a_new_meeting">Please Add a new Meeting !!</string>
+
 </resources>

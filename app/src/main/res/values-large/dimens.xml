@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default NavigationView Header height -->
+    <dimen name="nav_header_height">250dp</dimen>
+    <dimen name="nav_header_text_size_title">25sp</dimen>
+    <dimen name="nav_header_text_size">18sp</dimen>
+
+    <!--      Come back Message          -->
+    <dimen name="come_back_message_text_size">18sp</dimen>
+
+    <!--          List Item               -->
+    <dimen name="circle_pic_size">60dp</dimen>
+    <dimen name="text_size">22sp</dimen>
+    <dimen name="text_size_mail">15sp</dimen>
+
+    <!--          Detail Fragment               -->
+    <dimen name="detail_text_size_title">40sp</dimen>
+    <dimen name="detail_text_size">25sp</dimen>
+    <dimen name="title_card_margin_top">320dp</dimen>
+    <dimen name="detail_card_margin_top">40dp</dimen>
+    <dimen name="list_participants_card_margin_top">40dp</dimen>
+    <dimen name="list_participants_card_margin_bottom">50dp</dimen>
+    <dimen name="pic_details_height">350dp</dimen>
+    <dimen name="title_card_height">75dp</dimen>
+    <dimen name="detail_card_height">230dp</dimen>
+    <dimen name="list_participants_card_height">220dp</dimen>
+    <dimen name="detail_item_participant_size">40dp</dimen>
+
+    <!--        Search by Room Dialog           -->
+    <dimen name="search_room_dialog_height">350dp</dimen>
+    <dimen name="search_room_btn_height">40dp</dimen>
+
+    <!--        Empty list Message           -->
+    <dimen name="empty_list_message_pic_height">350dp</dimen>
+    <dimen name="empty_list_message_text_size">30sp</dimen>
+
+    <!--  Add Meeting Fragment  -->
+    <dimen name="add_pic_height">350dp</dimen>
+    <dimen name="add_pic_height_land">450dp</dimen>
+    <dimen name="add_title_height">75dp</dimen>
+    <dimen name="add_title_margin_top">320dp</dimen>
+    <dimen name="add_title_margin_top_land">120dp</dimen>
+    <dimen name="add_title_text_size">40sp</dimen>
+    <dimen name="add_input_text_size">25sp</dimen>
+    <dimen name="add_input_margin_top">35dp</dimen>
+    <dimen name="add_input_card_margin_top">50dp</dimen>
+    <dimen name="add_btn_save_height">65dp</dimen>
+    <dimen name="add_btn_save_height_land">65dp</dimen>
+    <dimen name="add_btn_save_width">250dp</dimen>
+    <dimen name="add_btn_margin_top">40dp</dimen>
+
+</resources>

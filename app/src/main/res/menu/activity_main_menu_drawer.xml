@@ -6,12 +6,17 @@
 
     <item android:title="@string/room"
         android:icon="@drawable/ic_home_black_24dp"
-        android:id="@+id/Seach_menu_byRoom"
+        android:id="@+id/Search_menu_byRoom"
         app:showAsAction="never"/>
 
     <item android:title="@string/time"
         android:icon="@drawable/ic_access_time_black_24dp"
-        android:id="@+id/Seach_menu_byTime"
+        android:id="@+id/Search_menu_byTime"
         app:showAsAction="never"/>
+
+    <item android:title="@string/date"
+          android:icon="@drawable/baseline_date_range_24"
+          android:id="@+id/Search_menu_byDate"
+          app:showAsAction="never"/>
 
 </menu>

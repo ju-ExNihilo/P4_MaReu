@@ -3,7 +3,17 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <device id="pixel_3" />
+        <device id="pixel_3_xl" />
+        <device id="pixel_2" />
+        <device id="pixel" />
+        <device id="Nexus 9" />
+        <device id="pixel_3a_xl" />
+        <device id="pixel_c" />
+        <device id="Nexus 10" />
+        <device id="pixel_xl" />
+        <device id="Nexus 6" />
+        <device id="pixel_2_xl" />
+        <target>android-29</target>
       </config>
     </shared>
   </component>
@@ -13,51 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e29ddafb-5659-43c4-ac55-132a2e32f39a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_3_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_9_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_9_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_9_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_9_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/model/Meeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/ListMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/ListMeetingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/MyMeetingRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/MyMeetingRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/ParticipantsRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/ParticipantsRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button_go_search_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blue_button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_meeting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_meeting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meeting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meeting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meeting_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meeting_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_by_room_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_by_room_popup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.15.128:5555" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="hdpi" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -86,35 +73,43 @@
   </component>
   <component name="ProjectId" id="1ZG3LNMeRKShWe8GkkrXbO5E0sX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="hdpi" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-04T22:27:08.748146400Z" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juju_\IdeaProjects\MaReu\app\src\main\res\drawable" />
+      <recent name="C:\Users\juju_\IdeaProjects\MaReu\app\src\main\res\mipmap-xxxhdpi" />
+      <recent name="C:\Users\juju_\IdeaProjects\MaReu\app\src\main\res\mipmap-xxhdpi" />
+      <recent name="C:\Users\juju_\IdeaProjects\MaReu\app\src\main\res\mipmap-xhdpi" />
+      <recent name="C:\Users\juju_\IdeaProjects\MaReu\app\src\main\res\mipmap-mdpi" />
+    </key>
     <key name="android.template.packageName">
       <recent name="fr.julien.Lamzone.ui.activity" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\drawable" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\values-w820dp" />
+      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\values-sw600dp" />
+      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\values-w440dp" />
+      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\values-440dip" />
+      <recent name="C:\Users\juju_\AndroidStudioProjects\MaReu\app\src\main\res\values-w440dip" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -137,31 +132,10 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
@@ -173,6 +147,145 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MeetingInstrumentedT..." type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myMeetingsList_cre...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="myMeetingsList_create_newMeeting" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myMeetingsList_sea...() (1)" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byDate" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myMeetingsList_sea...() (2)" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byRoom" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myMeetingsList_sea...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byTime" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android Instrumented Tests.MeetingInstrumentedT..." />
+        <item itemvalue="Android Instrumented Tests.myMeetingsList_cre...()" />
+        <item itemvalue="Android Instrumented Tests.myMeetingsList_sea...() (2)" />
+        <item itemvalue="Android Instrumented Tests.myMeetingsList_sea...() (1)" />
+        <item itemvalue="Android Instrumented Tests.myMeetingsList_sea...()" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -184,8 +297,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584451546886</updated>
+      <workItem from="1585480329348" duration="13075000" />
+      <workItem from="1585641732982" duration="855000" />
+      <workItem from="1585659407582" duration="193000" />
+      <workItem from="1585659861074" duration="1660000" />
+      <workItem from="1585665235899" duration="536000" />
+      <workItem from="1585667313096" duration="2682000" />
+      <workItem from="1585671320665" duration="5211000" />
+      <workItem from="1585682461712" duration="4546000" />
+      <workItem from="1585689329717" duration="59000" />
+      <workItem from="1585698822646" duration="3454000" />
+      <workItem from="1585744876939" duration="16481000" />
+      <workItem from="1585771621056" duration="6939000" />
+      <workItem from="1585832144072" duration="8050000" />
+      <workItem from="1585844305630" duration="9121000" />
+      <workItem from="1585856510750" duration="5573000" />
+      <workItem from="1585917858531" duration="8528000" />
+      <workItem from="1585927830376" duration="11386000" />
+      <workItem from="1585999416650" duration="7936000" />
+      <workItem from="1586024310029" duration="13635000" />
+      <workItem from="1586078773540" duration="3948000" />
+      <workItem from="1586101257608" duration="6103000" />
+      <workItem from="1586180199855" duration="3447000" />
+      <workItem from="1586183705523" duration="8617000" />
+      <workItem from="1586208230404" duration="4867000" />
+      <workItem from="1586351268413" duration="12161000" />
+      <workItem from="1586440213929" duration="265000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -199,5 +341,83 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Intentions" timestamp="1585926122482">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Intentions/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1585926122482" />
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1586355139962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586355139962" />
+    <state x="696" y="379" width="527" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586191658157">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="696" y="379" width="527" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586191658157" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586182086307">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586182086307" />
+    <state x="540" y="275" key="AndroidCreateResourceDirectoryDialog" timestamp="1585935767870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="275" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1585935767870" />
+    <state x="818" y="310" key="AndroidCreateXmlResourceDialog" timestamp="1585863364275">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="818" y="310" key="AndroidCreateXmlResourceDialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1585863364275" />
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1586355161848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586355161848" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1586355161847">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586355161847" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1586355161847">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586355161847" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1586355161848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586355161848" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586021122089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586021122089" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586021122089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586021122089" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586021122089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586021122089" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586021122089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586021122089" />
+    <state x="540" y="255" key="IDE.errors.dialog" timestamp="1586029753346">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586029753346" />
+    <state x="-1211" y="320" key="SettingsEditor" timestamp="1585480674250">
+      <screen x="-1920" y="137" width="1920" height="1040" />
+    </state>
+    <state x="-1211" y="320" key="SettingsEditor/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1585480674250" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1586013770538">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586013770538" />
+    <state x="130" y="104" width="1736" height="856" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1586378762080">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="130" y="104" width="1736" height="856" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586378762080" />
+    <state x="-1250" y="337" key="com.intellij.ide.util.TipDialog" timestamp="1586440483132">
+      <screen x="-1920" y="137" width="1920" height="1040" />
+    </state>
+    <state x="-1250" y="337" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.137.1920.1040@0.0.1920.1040" timestamp="1586440483132" />
   </component>
 </project>

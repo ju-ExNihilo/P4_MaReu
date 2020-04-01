@@ -28,7 +28,7 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
 
     private final OnMeetingItemClickListener callback;
     private WeakReference<OnMeetingItemClickListener> callbackWeakRef;
-    private final List<Meeting> meetings;
+    private List<Meeting> meetings;
 
     public MyMeetingRecyclerViewAdapter(List<Meeting> meetings, OnMeetingItemClickListener callback) {
         this.meetings = meetings;
@@ -45,7 +45,7 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         this.callbackWeakRef = new WeakReference<OnMeetingItemClickListener>(callback);
-        final Meeting meeting = meetings.get(position);
+        Meeting meeting = meetings.get(position);
         String participants = meeting.getParticipants().toString().replaceAll("\\[|\\]" , "");
         holder.mMeetingSubject.setText(meeting.getSubject());
         holder.mMeetingAvatar.setImageResource(meeting.getColor());
@@ -63,10 +63,6 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
             OnMeetingItemClickListener callBack = callbackWeakRef.get();
             if (callBack != null) callBack.onClickMeetingItem(position);
         });
-    }
-
-    public Meeting getMeeting(int position){
-        return this.meetings.get(position);
     }
 
     @Override
