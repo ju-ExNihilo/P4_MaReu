@@ -37,7 +37,7 @@ public class Meeting implements Parcelable {
         this.participants = participants;
     }
 
-    /** Constructor for Parcebal Neighbour */
+    /** Constructor for Parcelable Meeting */
     protected Meeting(Parcel in) {
         this.hourStart = in.readInt();
         this.minuteStart = in.readInt();
@@ -47,7 +47,7 @@ public class Meeting implements Parcelable {
         this.participants = in.readArrayList(null);
     }
 
-    /** For Parcebal Neighbour */
+    /** For Parcelable Meeting */
     public static final Creator<Meeting> CREATOR = new Creator<Meeting>() {
         @Override
         public Meeting createFromParcel(Parcel in) {
