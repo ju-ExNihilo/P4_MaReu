@@ -22,23 +22,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e29ddafb-5659-43c4-ac55-132a2e32f39a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/MyMeetingRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/recyclerViewAdapter/MyMeetingRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e29ddafb-5659-43c4-ac55-132a2e32f39a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,6 +310,7 @@
       <workItem from="1586208230404" duration="4867000" />
       <workItem from="1586351268413" duration="12161000" />
       <workItem from="1586440213929" duration="514000" />
+      <workItem from="1586443546783" duration="483000" />
     </task>
     <servers />
   </component>
