@@ -57,6 +57,9 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Ma Réu" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -322,7 +325,7 @@
       <workItem from="1586183705523" duration="8617000" />
       <workItem from="1586208230404" duration="4867000" />
       <workItem from="1586351268413" duration="12161000" />
-      <workItem from="1586440213929" duration="265000" />
+      <workItem from="1586440213929" duration="514000" />
     </task>
     <servers />
   </component>
