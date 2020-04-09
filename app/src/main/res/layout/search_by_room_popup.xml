@@ -21,17 +21,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="@dimen/search_room_dialog_height"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         app:cardBackgroundColor="@color/colorWhite"
-=======
-        android:layout_height="350dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
         app:cardCornerRadius="15dp"
         app:cardElevation="10dp">
 

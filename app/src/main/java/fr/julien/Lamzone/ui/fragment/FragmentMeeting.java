@@ -31,7 +31,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
 
     private MeetingApiService meetingApiService;
     private List<Meeting> meetings;
-<<<<<<< HEAD
     private String search;
     private String contentOfSearch;
     private String emptyText;
@@ -45,13 +44,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     public interface OnButtonClickedListener {
         public void onButtonClicked(int position);
     }
-=======
-    private String search = "default";
-    private String S_search = "";
-    private LinearLayout emptyList;
-    private TextView empty_text;
-    private String emptyText;
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
     /**
      * Create and return a new instance
@@ -67,7 +59,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         super.onCreate(savedInstanceState);
         DI.resetApiService();
         meetingApiService = DI.getMeetingApiService();
-<<<<<<< HEAD
     }
 
     @Override
@@ -82,8 +73,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         } catch (ClassCastException e) {
             throw new ClassCastException(e.toString());
         }
-=======
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     }
 
     @Override
@@ -94,14 +83,11 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         ButterKnife.bind(this, view);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-        emptyList = (LinearLayout) getActivity().findViewById(R.id.empty_list);
-        empty_text = (TextView) getActivity().findViewById(R.id.empty_text);
         return view;
     }
 
     public void initList(String search, String contentOfSearch){
         this.search = search;
-<<<<<<< HEAD
         this.contentOfSearch = contentOfSearch;
 
         switch (search){
@@ -131,25 +117,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
 
         if (meetings.isEmpty()){
             emptyTextLayout.setText(emptyText);
-=======
-        this.S_search = S_search;
-
-        if (search.contentEquals("default")){
-            meetings = meetingApiService.getMeeting();
-            emptyText = getString(R.string.add_meeting);
-        }
-        else if (search.contentEquals("room")){
-            meetings = meetingApiService.searchByRoom(S_search);
-            emptyText = getString(R.string.no_meeting_room);
-        }
-        else if (search.contentEquals("time")){
-            meetings = meetingApiService.searchByTime(S_search);
-            emptyText = getString(R.string.no_meeting_time);
-        }
-
-        if (meetings.isEmpty()){
-            empty_text.setText(emptyText);
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
             recyclerView.setVisibility(View.INVISIBLE);
             emptyList.setVisibility(View.VISIBLE);
         }else{

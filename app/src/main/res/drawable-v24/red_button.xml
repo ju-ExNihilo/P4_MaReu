@@ -3,14 +3,6 @@
     android:shape="rectangle">
 
     <corners android:radius="10dp"/>
-<<<<<<< HEAD
-<<<<<<< HEAD:app/src/main/res/drawable-v24/red_button.xml
     <solid android:color="@color/colorRed"/>
-=======
-    <solid android:color="@color/colorPrimary"/>
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77:app/src/main/res/drawable/blue_button.xml
-=======
-    <solid android:color="@color/colorRed"/>
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
 </shape>

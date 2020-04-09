@@ -15,10 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-<<<<<<< HEAD
-=======
-import androidx.fragment.app.Fragment;
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,18 +30,10 @@ import fr.julien.Lamzone.ui.fragment.FragmentMeeting;
 import fr.julien.Lamzone.ui.recyclerViewAdapter.RoomPopUpRecyclerViewAdapter;
 
 public class ListMeetingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
-<<<<<<< HEAD
         RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener,FragmentMeeting.OnButtonClickedListener {
 
     @BindView(R.id.meetingActivity_drawer) DrawerLayout drawerLayout;
     @BindView(R.id.activity_main_nav_view) NavigationView navigationView;
-=======
-        RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener {
-
-    @BindView(R.id.meetingActivity_drawer) DrawerLayout drawerLayout;
-    @BindView(R.id.activity_main_nav_view) NavigationView navigationView;
-    @BindView(R.id.layout_for_search) ConstraintLayout layout_for_search;
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
     private Dialog dialog;
     private TimePickerDialog pickerTime;
@@ -58,10 +46,7 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     public static final String DATE_SEARCH = "DATE_SEARCH";
     private FragmentMeeting meetingFragment;
     private RecyclerView recyclerView;
-<<<<<<< HEAD
     private DetailsMeetingFragment detailsMeetingFragment;
-=======
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,7 +110,6 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     @OnClick(R.id.add_meeting)
     void addMeeting() { AddMeetingActivity.navigate(this);}
 
-<<<<<<< HEAD
     public void showMenuRoom() {
         dialog.setContentView(R.layout.search_by_room_popup);
         roomCloseDialog = (ImageView) dialog.findViewById(R.id.roomCloseDialog);
@@ -140,41 +124,18 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     }
 
     private void showMenuDate(){
-            final Calendar cldr = Calendar.getInstance();
-            int day = cldr.get(Calendar.DAY_OF_MONTH);
-            int month = cldr.get(Calendar.MONTH);
-            int year = cldr.get(Calendar.YEAR);
-            pickerDate = new DatePickerDialog(ListMeetingActivity.this,R.style.myTimePickerStyle,
-                    (view, year1, monthOfYear, dayOfMonth) ->{
-                            contentOfSearch = getString(R.string.date_format,Meeting.pad(dayOfMonth),Meeting.pad((monthOfYear + 1)), Meeting.pad(year1));
-                            meetingFragment.initList(DATE_SEARCH, contentOfSearch);
-                            this.dialog.dismiss();
-                    }, year, month, day);
-            pickerDate.show();
+        final Calendar cldr = Calendar.getInstance();
+        int day = cldr.get(Calendar.DAY_OF_MONTH);
+        int month = cldr.get(Calendar.MONTH);
+        int year = cldr.get(Calendar.YEAR);
+        pickerDate = new DatePickerDialog(ListMeetingActivity.this,R.style.myTimePickerStyle,
+                (view, year1, monthOfYear, dayOfMonth) ->{
+                    contentOfSearch = getString(R.string.date_format,Meeting.pad(dayOfMonth),Meeting.pad((monthOfYear + 1)), Meeting.pad(year1));
+                    meetingFragment.initList(DATE_SEARCH, contentOfSearch);
+                    this.dialog.dismiss();
+                }, year, month, day);
+        pickerDate.show();
 
-=======
-    @OnClick(R.id.add_meeting)
-    void addMeeting() { AddMeetingActivity.navigate(this);}
-
-    private void defaultSearch() {
-        search = "default";
-        S_search = "";
-        meetingFragment.initList(search, S_search);
-        layout_for_search.setVisibility(View.INVISIBLE);
-    }
-
-    public void showMenuRoom() {
-        roomDialog.setContentView(R.layout.search_by_room_popup);
-        roomCloseDialog = (ImageView) roomDialog.findViewById(R.id.roomCloseDialog);
-        recyclerView = (RecyclerView) roomDialog.findViewById(R.id.list_room);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
-        recyclerView.setAdapter(new RoomPopUpRecyclerViewAdapter(this));
-        roomCloseDialog.setOnClickListener(view -> roomDialog.dismiss());
-        roomDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        roomDialog.show();
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     }
 
     private void showMenuTime( ){
@@ -183,9 +144,9 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
         int minutes = cldr.get(Calendar.MINUTE);
         pickerTime = new TimePickerDialog(ListMeetingActivity.this,R.style.myTimePickerStyle,
                 (tp, sHour, sMinute) -> {
-                contentOfSearch = getString(R.string.add_h_for_time,Meeting.pad(sHour),Meeting.pad(sMinute));
-                meetingFragment.initList(TIME_SEARCH, contentOfSearch);
-                this.dialog.dismiss();
+                    contentOfSearch = getString(R.string.add_h_for_time,Meeting.pad(sHour),Meeting.pad(sMinute));
+                    meetingFragment.initList(TIME_SEARCH, contentOfSearch);
+                    this.dialog.dismiss();
                 }, hour, minutes, true);
         pickerTime.show();
     }
@@ -214,7 +175,6 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
 
     @Override
     public void onClickRoomButton(int position) {
-<<<<<<< HEAD
         int button_number = position+1;
         contentOfSearch = getString(R.string.room_format, button_number);
         meetingFragment.initList(ROOM_SEARCH, contentOfSearch);
@@ -229,13 +189,5 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
             intent.putExtra(DetailsMeetingFragment.KEY_MEETING, meetingParcelabe);
             startActivity(intent);
         }else{detailsMeetingFragment.updateDetailMeeting(meetingParcelabe);}
-=======
-        search = "room";
-        int button_number = position+1;
-        S_search = "Room " + button_number;
-        if (!search.contentEquals("default"))layout_for_search.setVisibility(View.VISIBLE);
-        meetingFragment.initList(search, S_search);
-        this.roomDialog.dismiss();
->>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     }
 }
