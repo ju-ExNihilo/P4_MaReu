@@ -31,7 +31,6 @@ import static fr.julien.Lamzone.utils.RecyclerViewItemCountAssertion.withItemCou
 @RunWith(AndroidJUnit4.class)
 public class MeetingInstrumentedTest {
 
-    // This is fixed
     private ListMeetingActivity mActivity;
     private static int ITEMS_COUNT = 3;
     private static int ITEMS_COUNT_FOR_SEARCH = 1;
@@ -75,32 +74,32 @@ public class MeetingInstrumentedTest {
     public void myMeetingsList_create_newMeeting() {
         onView(ViewMatchers.withId(R.id.add_meeting)).perform(click());
         onView(ViewMatchers.withId(R.id.add_activity));
-
+        /** Subject */
         onView(ViewMatchers.withId(R.id.subjectLyt)).perform(typeText("Sujet 4"));
-
+        /** Date */
         onView(ViewMatchers.withId(R.id.dateLyt)).perform(scrollTo(),doubleClick());
         onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
                 .perform(PickerActions.setDate(2020,04,06));
         onView(withId(android.R.id.button1)).perform(click());
-
+        /** Time */
         onView(ViewMatchers.withId(R.id.timeLyt)).perform(scrollTo(),doubleClick());
         onView(withClassName(Matchers.equalTo(TimePicker.class.getName())))
                 .perform(PickerActions.setTime(17,00));
         onView(withId(android.R.id.button1)).perform(click());
-
+        /** Room */
         onView(ViewMatchers.withId(R.id.roomLyt)).perform(scrollTo(),doubleClick());
         onView(ViewMatchers.withId(R.id.list_room)).perform(RecyclerViewActions.actionOnItemAtPosition(3,click()));
-
+        /** Participants 1 */
         onView(ViewMatchers.withId(R.id.participantsLyt)).perform(scrollTo(),doubleClick());
         onView(withClassName(Matchers.equalTo(TextInputEditText.class.getName())))
                 .perform(typeText("test@lamzone.fr"));
         onView(withId(android.R.id.button1)).perform(click());
-
+        /** Participants 2 */
         onView(ViewMatchers.withId(R.id.participantsLyt)).perform(click());
         onView(withClassName(Matchers.equalTo(TextInputEditText.class.getName())))
                 .perform(typeText("test2@lamzone.fr"));
         onView(withId(android.R.id.button1)).perform(click());
-
+        /** Check if list have one more item */
         onView(ViewMatchers.withId(R.id.create)).perform(click());
         onView(ViewMatchers.withId(R.id.list_meeting)).check(withItemCount(ITEMS_COUNT+1));
     }

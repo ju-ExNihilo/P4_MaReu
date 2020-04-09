@@ -33,7 +33,6 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
     private int hourStart;
     private int minuteStart;
     private String date ="";
-    private final int DURATION_MEETING = 45;
 
     public RoomPopUpRecyclerViewAdapter(OnRoomItemClickListener callback) {
         meetingApiService = DI.getMeetingApiService();
@@ -78,8 +77,8 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
                             button.setEnabled(false);
                         }
                     }
-                }else if (hourStart + DURATION_MEETING == oldMeeting.getHourStart()) {
-                    if (minuteStart + DURATION_MEETING > oldMeeting.getMinuteStart()){
+                }else if (hourStart + Meeting.DURATION_MEETING == oldMeeting.getHourStart()) {
+                    if (minuteStart + Meeting.DURATION_MEETING > oldMeeting.getMinuteStart()){
                         if (oldMeeting.getPlace().contentEquals(button.getText())){
                             button.setBackgroundResource(R.drawable.red_button);
                             button.setEnabled(false);

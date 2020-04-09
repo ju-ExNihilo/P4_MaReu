@@ -3,8 +3,8 @@ package fr.julien.Lamzone.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.util.List;
-
 import fr.julien.Lamzone.R;
+
 
 /**
  * Model object representing a Meeting
@@ -27,6 +27,10 @@ public class Meeting implements Parcelable {
     // The list of participants
     private List<String> participants;
 
+    //Constant
+    public static final int DURATION_MEETING = 45;
+    public static final int MINUTE_IN_ONE_HOUR = 60;
+
     // Constructor
     public Meeting(int hourStart,int minuteStart, String date, String place, String subject, List<String> participants) {
         this.hourStart = hourStart;
@@ -37,7 +41,7 @@ public class Meeting implements Parcelable {
         this.participants = participants;
     }
 
-    /** Constructor for Parcebal Neighbour */
+    /** Constructor for Parcelable Meeting */
     protected Meeting(Parcel in) {
         this.hourStart = in.readInt();
         this.minuteStart = in.readInt();
@@ -47,7 +51,7 @@ public class Meeting implements Parcelable {
         this.participants = in.readArrayList(null);
     }
 
-    /** For Parcebal Neighbour */
+    /** For Parcelable Meeting */
     public static final Creator<Meeting> CREATOR = new Creator<Meeting>() {
         @Override
         public Meeting createFromParcel(Parcel in) {
@@ -64,7 +68,6 @@ public class Meeting implements Parcelable {
     public int getHourStart() {
         return hourStart;
     }
-
     public void setHourStart(int hour) {
         this.hourStart = hour;
     }
@@ -72,93 +75,29 @@ public class Meeting implements Parcelable {
     public int getMinuteStart() {
         return minuteStart;
     }
-
     public void setMinuteStart(int minute) {
         this.minuteStart = minute;
     }
 
     public int getHourEnd() {
-        minuteEnd = getMinuteStart() + 45 ;
+        minuteEnd = getMinuteStart() + DURATION_MEETING ;
         hourEnd = getHourStart();
 
-        if (minuteEnd >= 60) {
+        if (minuteEnd >= MINUTE_IN_ONE_HOUR) {
             hourEnd ++ ;
-            minuteEnd = minuteEnd -60 ;
+            minuteEnd = minuteEnd - MINUTE_IN_ONE_HOUR;
         }
         return hourEnd;
     }
 
-    public void setHourEnd(int hourEnd) {
-        this.hourEnd = hourEnd;
-    }
-
     public int getMinuteEnd() {
-        minuteEnd = getMinuteStart() + 45 ;
+        minuteEnd = getMinuteStart() + DURATION_MEETING ;
         hourEnd = getHourStart();
 
-        if (minuteEnd >= 60) {
-            minuteEnd = minuteEnd -60 ;
+        if (minuteEnd >= MINUTE_IN_ONE_HOUR) {
+            minuteEnd = minuteEnd - MINUTE_IN_ONE_HOUR;
         }
         return minuteEnd;
-    }
-
-    public void setMinuteEnd(int minuteEnd) {
-        this.minuteEnd = minuteEnd;
-    }
-
-    public String getTimeStart() {
-        timeStart = pad(getHourStart()) + "h" + pad(getMinuteStart());
-        return timeStart;
-    }
-
-    public void setTimeStart(String timeStart) {
-        this.timeStart = timeStart;
-    }
-
-    public String getTimeEnd() {
-
-        minuteEnd = getMinuteStart() + 45 ;
-        hourEnd = getHourStart();
-
-        if (minuteEnd >= 60) {
-            hourEnd ++ ;
-            minuteEnd = minuteEnd -60 ;
-        }
-
-        timeEnd = pad(hourEnd) + "h" + pad(minuteEnd);
-        return timeEnd;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public List<String> getParticipants() {
-        return participants;
-    }
-
-    public void setParticipants(List<String> participants) {
-        this.participants = participants;
     }
 
     public int getColor(){
@@ -181,6 +120,56 @@ public class Meeting implements Parcelable {
         }
 
     }
+
+    public void setHourEnd(int hourEnd) {
+        this.hourEnd = hourEnd;
+    }
+    public void setMinuteEnd(int minuteEnd) {
+        this.minuteEnd = minuteEnd;
+    }
+
+    public String getTimeStart() {
+        timeStart = pad(getHourStart()) + "h" + pad(getMinuteStart());
+        return timeStart;
+    }
+
+    public void setTimeStart(String timeStart) {
+        this.timeStart = timeStart;
+    }
+
+    public String getTimeEnd() {
+        timeEnd = pad(getHourEnd()) + "h" + pad(getMinuteEnd());
+        return timeEnd;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public List<String> getParticipants() {
+        return participants;
+    }
+    public void setParticipants(List<String> participants) {
+        this.participants = participants;
+    }
+
 
     @Override
     public String toString() {
