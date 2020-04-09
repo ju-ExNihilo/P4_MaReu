@@ -30,11 +30,14 @@ public class DetailsMeetingFragment extends Fragment {
     @BindView(R.id.detail_subject) TextView subject;
     @BindView(R.id.detail_room) TextView room;
     @BindView(R.id.detail_time) TextView time;
+<<<<<<< HEAD
     @BindView(R.id.detail_date) TextView date;
     @BindView(R.id.title_details) TextView titleDetails;
     @BindView(R.id.for_see_details_layout) ConstraintLayout forSeeDetailsLayout;
     @BindView(R.id.list_participants_card) CardView listParticipantsCard;
     @BindView(R.id.detail_card) CardView detailCard;
+=======
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
     public static final String KEY_MEETING = "KEY_MEETING";
     private Meeting meeting;
@@ -73,8 +76,12 @@ public class DetailsMeetingFragment extends Fragment {
                 meeting = intent.getParcelableExtra(KEY_MEETING);
                 subject.setText(meeting.getSubject());
                 room.setText(meeting.getPlace());
+<<<<<<< HEAD
                 date.setText(meeting.getDate());
                 time.setText(getString(R.string.to,meeting.getTimeStart(),meeting.getTimeEnd()));
+=======
+                time.setText(meeting.getTimeStart() +"  "+ getString(R.string.to) +"  "+ meeting.getTimeEnd());
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
             }
         }
         return (result);

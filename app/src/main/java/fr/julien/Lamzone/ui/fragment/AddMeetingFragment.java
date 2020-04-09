@@ -1,6 +1,7 @@
 package fr.julien.Lamzone.ui.fragment;
 
 import android.annotation.SuppressLint;
+<<<<<<< HEAD
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -8,24 +9,55 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.*;
+=======
+import android.app.Dialog;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+<<<<<<< HEAD
 import android.text.InputType;
 import android.text.TextUtils;
+=======
+
+import android.text.InputType;
+import android.text.TextUtils;
+import android.util.Log;
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+=======
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+<<<<<<< HEAD
 import com.google.android.material.textfield.TextInputEditText;
+=======
+import butterknife.OnClick;
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import fr.julien.Lamzone.R;
 import fr.julien.Lamzone.di.DI;
 import fr.julien.Lamzone.model.Meeting;
@@ -37,6 +69,7 @@ import fr.julien.Lamzone.ui.recyclerViewAdapter.RoomPopUpRecyclerViewAdapter;
  */
 public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener {
 
+<<<<<<< HEAD
     @BindView(R.id.subjectLyt) TextInputEditText subjectLyt;
     @BindView(R.id.timeLyt) TextInputEditText timeLyt;
     @BindView(R.id.participantsLyt) TextInputEditText participantsLyt;
@@ -49,11 +82,29 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
     private int hourStart;
     private int minuteStart;
     private String dateString;
+=======
+    @BindView(R.id.subjectLyt) TextInputLayout subjectLyt;
+    @BindView(R.id.timeLyt) TextInputLayout timeLyt;
+    @BindView(R.id.time) TextInputEditText time;
+    @BindView(R.id.participants) TextInputEditText participants;
+    @BindView(R.id.roomLyt) TextInputLayout roomLyt;
+    @BindView(R.id.room) TextInputEditText room;
+    @BindView(R.id.participantsLyt) TextInputLayout participantsLyt;
+    @BindView(R.id.create) Button addButton;
+
+    private MeetingApiService meetingApiService;
+    private List<String> participantList ;
+    private String participantString;
+    private TimePickerDialog picker;
+    private int hourStart;
+    private int minuteStart;
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     private Dialog roomDialog;
     private ImageView roomCloseDialog;
     private TextView titlePopUp;
     private RecyclerView recyclerView;
 
+<<<<<<< HEAD
     /**
      * Create and return a new instance
      * @return @{@link FragmentMeeting}
@@ -63,6 +114,8 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
         return fragment;
     }
 
+=======
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +128,7 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
         View result = inflater.inflate(R.layout.fragment_add_meeting, container, false);
         ButterKnife.bind(this, result);
         this.roomDialog = new Dialog(this.getActivity());
+<<<<<<< HEAD
         this.forTimePicker(this.timeLyt);
         this.forAddParticipants(this.participantsLyt);
         this.forRoomPicker(this.roomLyt);
@@ -90,12 +144,21 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
         }
     }
 
+=======
+        this.forTimePicker(this.time);
+        this.forAddParticipants(this.participants);
+        this.forRoomPicker(this.room);
+        return (result);
+    }
+
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     private void forTimePicker(TextInputEditText time){
         time.setInputType(InputType.TYPE_NULL);
         time.setOnClickListener(v -> {
             final Calendar calendar = Calendar.getInstance();
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
             int minutes = calendar.get(Calendar.MINUTE);
+<<<<<<< HEAD
             pickerTime = new TimePickerDialog(this.getActivity(),R.style.myTimePickerStyle,
                     (tp, sHour, sMinute) -> {
                         time.setText(getString(R.string.add_h_for_time,Meeting.pad(sHour),Meeting.pad(sMinute)));
@@ -119,16 +182,31 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
                         date.setText(dateString);
                     }, year, month, day);
             pickerDate.show();
+=======
+            picker = new TimePickerDialog(this.getActivity(),R.style.myTimePickerStyle,
+                    (tp, sHour, sMinute) -> {
+                        time.setText(new StringBuilder().append(Meeting.pad(sHour))
+                                .append("h").append(Meeting.pad(sMinute)));
+                        hourStart = sHour;
+                        minuteStart = sMinute;
+                    }, hour, minutes, true);
+            picker.show();
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
         });
     }
 
     private void forRoomPicker(TextInputEditText room){
         room.setInputType(InputType.TYPE_NULL);
         room.setOnClickListener(v -> {
+<<<<<<< HEAD
             if (timeLyt.getText().toString().isEmpty()){
                 warningDialog(getString(R.string.time_first));
             }else if (dateLyt.getText().toString().isEmpty()){
                 warningDialog(getString(R.string.date_first));
+=======
+            if (timeLyt.getEditText().getText().toString().isEmpty()){
+                warningDialog(getString(R.string.time_first));
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
             }else{
                 roomDialog.setContentView(R.layout.search_by_room_popup);
                 roomCloseDialog = (ImageView) roomDialog.findViewById(R.id.roomCloseDialog);
@@ -137,7 +215,11 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
                 recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
                 recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
                 recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.HORIZONTAL));
+<<<<<<< HEAD
                 recyclerView.setAdapter(new RoomPopUpRecyclerViewAdapter(this, hourStart, minuteStart, dateString));
+=======
+                recyclerView.setAdapter(new RoomPopUpRecyclerViewAdapter(this, hourStart, minuteStart));
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
                 titlePopUp.setText(R.string.free_room);
                 roomCloseDialog.setOnClickListener(view -> roomDialog.dismiss());
                 roomDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -147,16 +229,27 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
     }
 
     private void warningDialog(String message){
+<<<<<<< HEAD
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext(),R.style.myDialogStyle);
         alertDialogBuilder.setTitle(R.string.warning)
                           .setIcon(R.mipmap.ic_launcher)
                           .setMessage(message)
                           .setCancelable(true)
                           .setNegativeButton(R.string.cancel, (dialogInterface, i) -> {dialogInterface.cancel();});
+=======
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+        alertDialogBuilder.setTitle(R.string.warning);
+        alertDialogBuilder.setMessage(message)
+                          .setCancelable(true)
+                          .setNegativeButton(R.string.cancel, (dialogInterface, i) -> {
+                              dialogInterface.cancel();
+                          });
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
 
+<<<<<<< HEAD
     @SuppressLint("ResourceAsColor")
     private void forAddParticipants(TextInputEditText participants){
         participants.setInputType(InputType.TYPE_NULL);
@@ -168,14 +261,32 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
             new AlertDialog.Builder(this.getActivity(),R.style.myDialogStyle)
                     .setTitle(R.string.for_add_participant)
                     .setIcon(R.mipmap.ic_launcher)
+=======
+    private void forAddParticipants(TextInputEditText participants){
+        participants.setInputType(InputType.TYPE_NULL);
+        participants.setOnClickListener(v -> {
+            final EditText txtUrl = new EditText(this.getActivity());
+            txtUrl.setHint(R.string.edit_text_mail);
+            new AlertDialog.Builder(this.getActivity())
+                    .setTitle(R.string.participants)
+                    .setMessage(R.string.require_mail)
+                    .setIcon(R.drawable.reunion)
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
                     .setView(txtUrl)
                     .setPositiveButton(R.string.ok, (dialog, whichButton) -> {
                         if (isEmailValid(txtUrl.getText().toString())){
                             String ifMail = participants.getText().toString();
                             if (ifMail.isEmpty())
                                 participants.setText(txtUrl.getText().toString());
+<<<<<<< HEAD
                             else participants.setText(getString(R.string.participant_format,ifMail,txtUrl.getText().toString()));
                         }else warningDialog(getString(R.string.require_valid_mail));
+=======
+                            else participants.setText(ifMail + "," +txtUrl.getText().toString());
+                        }else warningDialog(getString(R.string.require_valid_mail));
+
+
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
                     })
                     .setNegativeButton(R.string.back, (dialog, which) -> dialog.cancel())
                     .show();
@@ -188,15 +299,23 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
 
     private boolean enableSave(){
         boolean enable = false;
+<<<<<<< HEAD
         if (!timeLyt.getText().toString().isEmpty() &&
             !subjectLyt.getText().toString().isEmpty() &&
             !roomLyt.getText().toString().isEmpty() &&
             !participantsLyt.getText().toString().isEmpty())
+=======
+        if (!timeLyt.getEditText().getText().toString().isEmpty() &&
+            !subjectLyt.getEditText().getText().toString().isEmpty() &&
+            !roomLyt.getEditText().getText().toString().isEmpty() &&
+            !participantsLyt.getEditText().getText().toString().isEmpty())
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
             enable = true;
 
         return enable;
     }
 
+<<<<<<< HEAD
     public void addMeeting() {
         if (enableSave()){
             String participantString = participantsLyt.getText().toString();
@@ -207,6 +326,18 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
                     dateLyt.getText().toString(),
                     roomLyt.getText().toString(),
                     subjectLyt.getText().toString(),
+=======
+    @OnClick(R.id.create)
+    void addMeeting() {
+        if (enableSave()){
+            participantString = participantsLyt.getEditText().getText().toString();
+            participantList = Arrays.asList(participantString.split("\\s*,\\s*"));
+            Meeting meeting = new Meeting(
+                    hourStart,
+                    minuteStart,
+                    roomLyt.getEditText().getText().toString(),
+                    subjectLyt.getEditText().getText().toString(),
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
                     participantList
             );
             meetingApiService.createMeeting(meeting);
@@ -218,10 +349,16 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
     @Override
     public void onClickRoomButton(int position) {
         int button_number = position+1;
+<<<<<<< HEAD
         String forSearchRoom = getString(R.string.room_format, button_number);
         roomLyt.setText(forSearchRoom);
         this.roomDialog.dismiss();
     }
 
     public void onButtonSaveClicked() {addMeeting();}
+=======
+        room.setText(getString(R.string.room) +" "+ button_number);
+        this.roomDialog.dismiss();
+    }
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 }

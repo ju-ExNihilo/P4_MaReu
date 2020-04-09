@@ -3,12 +3,21 @@
           xmlns:tools="http://schemas.android.com/tools" package="fr.julien.Lamzone">
 
     <application
+<<<<<<< HEAD
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
+=======
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
         <activity
             android:name=".ui.activity.AddMeetingActivity"
@@ -18,9 +27,13 @@
 
         <activity
             android:name=".ui.activity.DetailsMeetingActivity"
+<<<<<<< HEAD
             android:parentActivityName=".ui.activity.ListMeetingActivity"
             android:label="@string/activity_add"
             android:theme="@style/AppTheme1"/>
+=======
+            android:parentActivityName=".ui.activity.ListMeetingActivity" />
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 
         <activity android:name=".ui.activity.ListMeetingActivity">
             <intent-filter>

@@ -4,7 +4,10 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.appcompat.widget.Toolbar;
+=======
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
 import fr.julien.Lamzone.R;
 import android.os.Bundle;
 import fr.julien.Lamzone.ui.fragment.DetailsMeetingFragment;
@@ -17,6 +20,7 @@ public class DetailsMeetingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_meeting);
+<<<<<<< HEAD
         this.showDetailMeetingFragment();
         this.configureToolbar();
     }
@@ -38,6 +42,9 @@ public class DetailsMeetingActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame_layout_detail_activity, this.detailsMeetingFragment).commit();
         }
+=======
+        this.configureToolbar();
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
     }
 
     private void configureToolbar(){

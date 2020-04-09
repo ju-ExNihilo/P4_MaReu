@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,3 +90,13 @@
     </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+=======
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:paddingBottom="60dp"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".ui.fragment.FragmentMeeting"
+    tools:listitem="@layout/fragment_meeting">
+
+</androidx.recyclerview.widget.RecyclerView>
+>>>>>>> a72fb5ab5cef0cced29251ab92440d56e2d62b77
