@@ -44,6 +44,12 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/service/MeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/service/MeetingApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/AddMeetingActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/ListMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/ListMeetingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/fr/julien/Lamzone/MeetingInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/fr/julien/Lamzone/MeetingInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/activity/DetailsMeetingActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/AddMeetingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/DetailsMeetingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fr/julien/Lamzone/ui/fragment/FragmentMeeting.java" afterDir="false" />
@@ -64,6 +70,9 @@
       <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/julien/Lamzone/MeetingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/fr/julien/Lamzone/MeetingServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hdpi/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid9904.log" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +80,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="3300ab84cdd6a25d" />
   <component name="ExportTestResults" outputFolder="$USER_HOME$/Desktop/P4_gorin_julien" userTempatePath="" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="hdpi" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -112,6 +122,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -264,6 +279,10 @@
       <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="PACKAGE_NAME" value="fr" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="METHOD_NAME" value="myMeetingsList_create_newMeeting" />
+      <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
@@ -289,6 +308,7 @@
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
         <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Hybrid>
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -310,6 +330,7 @@
       <module name="app" />
       <option name="TESTING_TYPE" value="3" />
       <option name="METHOD_NAME" value="myMeetingsList_create_newMeeting" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byDate" />
       <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -358,6 +379,7 @@
       <module name="app" />
       <option name="TESTING_TYPE" value="3" />
       <option name="METHOD_NAME" value="myMeetingsList_search_byDate" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byRoom" />
       <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -406,6 +428,7 @@
       <module name="app" />
       <option name="TESTING_TYPE" value="3" />
       <option name="METHOD_NAME" value="myMeetingsList_search_byRoom" />
+      <option name="METHOD_NAME" value="myMeetingsList_search_byTime" />
       <option name="CLASS_NAME" value="fr.julien.Lamzone.MeetingInstrumentedTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -508,13 +531,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Intentions" timestamp="1585926122482">
