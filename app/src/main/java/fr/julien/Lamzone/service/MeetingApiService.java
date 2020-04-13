@@ -1,7 +1,6 @@
 package fr.julien.Lamzone.service;
 
 import java.util.List;
-
 import fr.julien.Lamzone.model.Meeting;
 
 /**
@@ -10,10 +9,10 @@ import fr.julien.Lamzone.model.Meeting;
 public interface MeetingApiService {
 
     /**
-     * Get all my Neighbours
+     * Get all  Meetings
      * @return {@link List}
      */
-    List<Meeting> getMeeting();
+    List<Meeting> getMeetings();
 
     /**
      * Deletes a Meeting
@@ -28,21 +27,22 @@ public interface MeetingApiService {
     void createMeeting(Meeting meeting);
 
     /**
-     * Create a Meeting
+     * Search a Meeting by Room
      * @param room
      */
     List<Meeting> searchByRoom(String room);
 
     /**
-     * Create a Meeting
+     * Search a Meeting by Time
      * @param time
      */
     List<Meeting> searchByTime(String time);
 
     /**
-     * Create a Meeting
+     * Search a Meeting by Date
      * @param date
      */
     List<Meeting> searchByDate(String date);
+
 }
 

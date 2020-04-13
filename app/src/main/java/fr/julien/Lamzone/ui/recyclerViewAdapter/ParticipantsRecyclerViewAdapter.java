@@ -17,7 +17,7 @@ import fr.julien.Lamzone.R;
  */
 public class ParticipantsRecyclerViewAdapter extends RecyclerView.Adapter<ParticipantsRecyclerViewAdapter.ViewHolder> {
 
-    List<String> participants;
+    private List<String> participants;
 
     public ParticipantsRecyclerViewAdapter(List<String> participants) {
         this.participants = participants;
@@ -41,7 +41,7 @@ public class ParticipantsRecyclerViewAdapter extends RecyclerView.Adapter<Partic
         return participants.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.mail_participant) TextView mail_participant;
 

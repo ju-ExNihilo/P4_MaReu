@@ -15,7 +15,7 @@
     <!--          Picture description            -->
     <string name="reunion_picture">reunion_picture</string>
     <string name="cross_image">cross_image</string>
-    <string name="navheader_picture">navHeader_picture</string>
+    <string name="navHeader_picture">navHeader_picture</string>
     <string name="avatar_reunion">avatar_reunion</string>
 
     <!--          Search by Room PopUp             -->
@@ -71,6 +71,9 @@
 
     <!--          For Come Back          -->
     <string name="please_click_on_cross">For come back please click on cross</string>
+
+    <!--          For List          -->
+    <string name="for_list_items">-  %1$s</string>
 
     <!--          For Empty List          -->
     <string name="no_meeting_room">No Meeting for this Room !!</string>

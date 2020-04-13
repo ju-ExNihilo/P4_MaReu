@@ -2,7 +2,6 @@ package fr.julien.Lamzone;
 
 import fr.julien.Lamzone.di.DI;
 import fr.julien.Lamzone.model.Meeting;
-import fr.julien.Lamzone.service.DummyMeetingApiService;
 import fr.julien.Lamzone.service.DummyMeetingGenerator;
 import fr.julien.Lamzone.service.MeetingApiService;
 import org.hamcrest.collection.IsIterableContainingInAnyOrder;
@@ -11,7 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,7 +37,7 @@ public class MeetingServiceTest {
      */
     @Test
     public void getMeetingsWithSuccess() {
-        List<Meeting> meetings = service.getMeeting();
+        List<Meeting> meetings = service.getMeetings();
         List<Meeting> expectedMeetings = DummyMeetingGenerator.DUMMY_MEETING;
         assertThat(meetings, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedMeetings.toArray()));
     }
@@ -49,9 +47,9 @@ public class MeetingServiceTest {
      */
     @Test
     public void deleteMeetingWithSuccess() {
-        Meeting meetingToDelete = service.getMeeting().get(0);
+        Meeting meetingToDelete = service.getMeetings().get(0);
         service.deleteMeeting(meetingToDelete);
-        assertFalse(service.getMeeting().contains(meetingToDelete));
+        assertFalse(service.getMeetings().contains(meetingToDelete));
     }
 
     /**
@@ -61,7 +59,7 @@ public class MeetingServiceTest {
     public void createMeetingWithSuccess() {
         Meeting meeting = new Meeting(10,30,"06/04/2020", "Room 7", "Sujet 9", Arrays.asList("toto@gmail.fr", "tata@gmail.fr"));
         service.createMeeting(meeting);
-        assertTrue(service.getMeeting().contains(meeting));
+        assertTrue(service.getMeetings().contains(meeting));
     }
 
     /**

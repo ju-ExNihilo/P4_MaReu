@@ -34,15 +34,15 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
     private String search;
     private String contentOfSearch;
     private String emptyText;
-    private OnButtonClickedListener mCallback;
+    private OnMeetingClickedListener mCallback;
 
     @BindView(R.id.list_meeting) RecyclerView recyclerView;
     @BindView(R.id.empty_text) TextView emptyTextLayout;
     @BindView(R.id.empty_list) LinearLayout emptyList;
     @BindView(R.id.layout_for_search) ConstraintLayout layoutForSearch;
 
-    public interface OnButtonClickedListener {
-        public void onButtonClicked(int position);
+    public interface OnMeetingClickedListener {
+         void onMeetingClicked(int position);
     }
 
     /**
@@ -50,8 +50,7 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
      * @return @{@link FragmentMeeting}
      */
     public static FragmentMeeting newInstance() {
-        FragmentMeeting fragment = new FragmentMeeting();
-        return fragment;
+        return new FragmentMeeting();
     }
 
     @Override
@@ -69,10 +68,16 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
 
     private void createCallbackToParentActivity(){
         try {
-            mCallback = (OnButtonClickedListener) getActivity();
+            mCallback = (OnMeetingClickedListener) getActivity();
         } catch (ClassCastException e) {
             throw new ClassCastException(e.toString());
         }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mCallback = null;
     }
 
     @Override
@@ -93,7 +98,7 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         switch (search){
             case ListMeetingActivity.DEFAULT_SEARCH :
                 layoutForSearch.setVisibility(View.GONE);
-                meetings = meetingApiService.getMeeting();
+                meetings = meetingApiService.getMeetings();
                 emptyText = getString(R.string.please_add_a_new_meeting);
                 break;
             case ListMeetingActivity.ROOM_SEARCH :
@@ -122,7 +127,7 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
         }else{
             emptyList.setVisibility(View.INVISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
-            recyclerView.setAdapter(new MyMeetingRecyclerViewAdapter(meetings,this));
+            recyclerView.setAdapter(new MyMeetingRecyclerViewAdapter(meetings,this,this.getActivity()));
         }
     }
 
@@ -152,6 +157,6 @@ public class FragmentMeeting extends Fragment implements MyMeetingRecyclerViewAd
 
     @Override
     public void onClickMeetingItem(int position) {
-        mCallback.onButtonClicked(position);
+        mCallback.onMeetingClicked(position);
     }
 }

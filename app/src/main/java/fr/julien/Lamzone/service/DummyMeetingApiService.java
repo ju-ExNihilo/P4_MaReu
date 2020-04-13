@@ -10,7 +10,7 @@ public class DummyMeetingApiService implements MeetingApiService {
     private List<Meeting> meetingsForSearch = new ArrayList<>();
 
     @Override
-    public List<Meeting> getMeeting() {
+    public List<Meeting> getMeetings() {
         return meetings;
     }
 

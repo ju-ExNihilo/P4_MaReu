@@ -23,7 +23,7 @@
     <dimen name="list_participants_card_margin_bottom">50dp</dimen>
     <dimen name="pic_details_height">350dp</dimen>
     <dimen name="title_card_height">75dp</dimen>
-    <dimen name="detail_card_height">230dp</dimen>
+    <dimen name="detail_card_height">270dp</dimen>
     <dimen name="list_participants_card_height">220dp</dimen>
     <dimen name="detail_item_participant_size">40dp</dimen>
 

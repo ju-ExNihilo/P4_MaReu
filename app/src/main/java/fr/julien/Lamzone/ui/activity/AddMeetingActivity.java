@@ -60,10 +60,7 @@ public class AddMeetingActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Used to navigate to this activity
-     * @param activity
-     */
+    /** Used to navigate to this activity **/
     public static void navigate(FragmentActivity activity) {
         Intent intent = new Intent(activity, AddMeetingActivity.class);
         ActivityCompat.startActivity(activity, intent, null);

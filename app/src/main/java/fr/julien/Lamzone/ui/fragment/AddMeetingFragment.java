@@ -59,8 +59,7 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
      * @return @{@link FragmentMeeting}
      */
     public static AddMeetingFragment newInstance() {
-        AddMeetingFragment fragment = new AddMeetingFragment();
-        return fragment;
+        return new AddMeetingFragment();
     }
 
     @Override
@@ -197,7 +196,7 @@ public class AddMeetingFragment extends Fragment implements RoomPopUpRecyclerVie
         return enable;
     }
 
-    public void addMeeting() {
+    private void addMeeting() {
         if (enableSave()){
             String participantString = participantsLyt.getText().toString();
             List<String> participantList = Arrays.asList(participantString.split("\\s*,\\s*"));

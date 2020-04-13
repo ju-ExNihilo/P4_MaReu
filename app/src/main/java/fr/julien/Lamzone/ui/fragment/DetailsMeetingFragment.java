@@ -3,7 +3,7 @@ package fr.julien.Lamzone.ui.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
+
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -13,13 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import fr.julien.Lamzone.R;
-import fr.julien.Lamzone.di.DI;
 import fr.julien.Lamzone.model.Meeting;
-import fr.julien.Lamzone.service.MeetingApiService;
 import fr.julien.Lamzone.ui.recyclerViewAdapter.ParticipantsRecyclerViewAdapter;
 
 /**
@@ -35,26 +33,17 @@ public class DetailsMeetingFragment extends Fragment {
     @BindView(R.id.for_see_details_layout) ConstraintLayout forSeeDetailsLayout;
     @BindView(R.id.list_participants_card) CardView listParticipantsCard;
     @BindView(R.id.detail_card) CardView detailCard;
+    @BindView(R.id.list_participant) RecyclerView listParticipantsRecyclerView;
 
     public static final String KEY_MEETING = "KEY_MEETING";
     private Meeting meeting;
-    private RecyclerView recyclerView;
-    private MeetingApiService meetingApiService;
-    private List<Meeting> meetings;
 
     /**
      * Create and return a new instance
      * @return @{@link DetailsMeetingFragment}
      */
     public static DetailsMeetingFragment newInstance() {
-        DetailsMeetingFragment fragment = new DetailsMeetingFragment();
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        meetingApiService = DI.getMeetingApiService();
+        return new DetailsMeetingFragment();
     }
 
     @Override
@@ -63,9 +52,7 @@ public class DetailsMeetingFragment extends Fragment {
         View result = inflater.inflate(R.layout.fragment_details_meeting, container, false);
         ButterKnife.bind(this, result);
         Context context = result.getContext();
-        recyclerView = (RecyclerView) result.findViewById(R.id.list_participant);
-        recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        meetings = meetingApiService.getMeeting();
+        listParticipantsRecyclerView.setLayoutManager(new LinearLayoutManager(context));
         Intent intent = this.getActivity().getIntent();
         if (intent != null){
             if (intent.hasExtra(KEY_MEETING)){
@@ -112,7 +99,7 @@ public class DetailsMeetingFragment extends Fragment {
         if (meeting != null) initList();
     }
 
-    public void initList(){
-        recyclerView.setAdapter(new ParticipantsRecyclerViewAdapter(meeting.getParticipants()));
+    private void initList(){
+        listParticipantsRecyclerView.setAdapter(new ParticipantsRecyclerViewAdapter(meeting.getParticipants()));
     }
 }

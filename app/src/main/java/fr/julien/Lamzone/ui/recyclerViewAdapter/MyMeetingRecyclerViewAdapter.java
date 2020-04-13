@@ -1,5 +1,6 @@
 package fr.julien.Lamzone.ui.recyclerViewAdapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 import fr.julien.Lamzone.R;
 import fr.julien.Lamzone.model.Meeting;
+import fr.julien.Lamzone.ui.activity.ListMeetingActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,10 +31,12 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
     private final OnMeetingItemClickListener callback;
     private WeakReference<OnMeetingItemClickListener> callbackWeakRef;
     private List<Meeting> meetings;
+    private Context context;
 
-    public MyMeetingRecyclerViewAdapter(List<Meeting> meetings, OnMeetingItemClickListener callback) {
+    public MyMeetingRecyclerViewAdapter(List<Meeting> meetings, OnMeetingItemClickListener callback, Context context) {
         this.meetings = meetings;
         this.callback = callback;
+        this.context = context;
     }
 
     @Override
@@ -49,8 +53,8 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         String participants = meeting.getParticipants().toString().replaceAll("\\[|\\]" , "");
         holder.mMeetingSubject.setText(meeting.getSubject());
         holder.mMeetingAvatar.setImageResource(meeting.getColor());
-        holder.mMeetingTime.setText(" - " +meeting.getTimeStart());
-        holder.mMeetingRoom.setText(" - " +meeting.getPlace());
+        holder.mMeetingTime.setText(context.getString(R.string.for_list_items,meeting.getTimeStart()));
+        holder.mMeetingRoom.setText(context.getString(R.string.for_list_items,meeting.getPlace()));
         holder.mMeetingParticipants.setText(participants);
 
         /** Listener with callback **/
@@ -70,7 +74,7 @@ public class MyMeetingRecyclerViewAdapter extends RecyclerView.Adapter<MyMeeting
         return meetings.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+     static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.item_list_avatar) CircleImageView mMeetingAvatar;
         @BindView(R.id.item_list_subject) TextView mMeetingSubject;
         @BindView(R.id.item_list_time) TextView mMeetingTime;

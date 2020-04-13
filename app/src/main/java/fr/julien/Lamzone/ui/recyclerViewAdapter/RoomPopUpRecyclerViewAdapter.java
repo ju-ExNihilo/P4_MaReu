@@ -47,7 +47,6 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
         this.date = date;
     }
 
-    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -59,7 +58,7 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         this.callbackWeakRef = new WeakReference<OnRoomItemClickListener>(callback);
         holder.button_room.setText(buttons_name.get(position));
-        freeRoom(meetingApiService.getMeeting(),hourStart,minuteStart,date,holder.button_room);
+        freeRoom(meetingApiService.getMeetings(),hourStart,minuteStart,date,holder.button_room);
         holder.button_room.setOnClickListener(v -> {
             OnRoomItemClickListener callBack = callbackWeakRef.get();
             if (callBack != null) callBack.onClickRoomButton(position);
@@ -92,7 +91,7 @@ public class RoomPopUpRecyclerViewAdapter extends RecyclerView.Adapter<RoomPopUp
     @Override
     public int getItemCount() { return buttons.size();}
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.button_room) Button button_room;
 
         public ViewHolder(@NonNull View view) {

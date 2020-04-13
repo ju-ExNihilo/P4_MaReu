@@ -5,10 +5,7 @@ import android.os.Parcelable;
 import java.util.List;
 import fr.julien.Lamzone.R;
 
-
-/**
- * Model object representing a Meeting
- */
+/** Model object representing a Meeting **/
 public class Meeting implements Parcelable {
 
     // Time
@@ -26,10 +23,9 @@ public class Meeting implements Parcelable {
     private String subject;
     // The list of participants
     private List<String> participants;
-
     //Constant
     public static final int DURATION_MEETING = 45;
-    public static final int MINUTE_IN_ONE_HOUR = 60;
+    private static final int MINUTE_IN_ONE_HOUR = 60;
 
     // Constructor
     public Meeting(int hourStart,int minuteStart, String date, String place, String subject, List<String> participants) {
@@ -41,7 +37,7 @@ public class Meeting implements Parcelable {
         this.participants = participants;
     }
 
-    /** Constructor for Parcelable Meeting */
+    /** Constructor for Parcelable Meeting **/
     protected Meeting(Parcel in) {
         this.hourStart = in.readInt();
         this.minuteStart = in.readInt();
@@ -51,7 +47,7 @@ public class Meeting implements Parcelable {
         this.participants = in.readArrayList(null);
     }
 
-    /** For Parcelable Meeting */
+    /** For Parcelable Meeting **/
     public static final Creator<Meeting> CREATOR = new Creator<Meeting>() {
         @Override
         public Meeting createFromParcel(Parcel in) {
@@ -63,7 +59,7 @@ public class Meeting implements Parcelable {
             return new Meeting[size];
         }
     };
-    /** ********************** */
+    /** ********************** **/
 
     public int getHourStart() {
         return hourStart;
@@ -116,9 +112,7 @@ public class Meeting implements Parcelable {
                 return R.color.room510;
             default:
                 return R.color.room49;
-
         }
-
     }
 
     public void setHourEnd(int hourEnd) {
@@ -202,6 +196,5 @@ public class Meeting implements Parcelable {
         parcel.writeString(place);
         parcel.writeString(subject);
         parcel.writeList(participants);
-
     }
 }

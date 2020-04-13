@@ -30,7 +30,7 @@ import fr.julien.Lamzone.ui.fragment.FragmentMeeting;
 import fr.julien.Lamzone.ui.recyclerViewAdapter.RoomPopUpRecyclerViewAdapter;
 
 public class ListMeetingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
-        RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener,FragmentMeeting.OnButtonClickedListener {
+        RoomPopUpRecyclerViewAdapter.OnRoomItemClickListener, FragmentMeeting.OnMeetingClickedListener {
 
     @BindView(R.id.meetingActivity_drawer) DrawerLayout drawerLayout;
     @BindView(R.id.activity_main_nav_view) NavigationView navigationView;
@@ -182,12 +182,12 @@ public class ListMeetingActivity extends AppCompatActivity implements Navigation
     }
 
     @Override
-    public void onButtonClicked(int position) {
-        Meeting meetingParcelabe = meetingFragment.getMeetings().get(position);
+    public void onMeetingClicked(int position) {
+        Meeting meetingParcelable = meetingFragment.getMeetings().get(position);
         if (this.findViewById(R.id.frame_layout_detail) == null){
             Intent intent = new Intent(this, DetailsMeetingActivity.class);
-            intent.putExtra(DetailsMeetingFragment.KEY_MEETING, meetingParcelabe);
+            intent.putExtra(DetailsMeetingFragment.KEY_MEETING, meetingParcelable);
             startActivity(intent);
-        }else{detailsMeetingFragment.updateDetailMeeting(meetingParcelabe);}
+        }else{detailsMeetingFragment.updateDetailMeeting(meetingParcelable);}
     }
 }
